@@ -201,3 +201,8 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# some things I still don't want
+.dart_tool/package_config.json
+.packages
+android/gradle.properties
