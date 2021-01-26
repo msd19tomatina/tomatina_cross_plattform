@@ -4,8 +4,11 @@
 *.ap_
 *.aab
 
-.dart_tool/package_config.json
-.packages
+*.dart
+*.packages
+
+*.dart_tool/package_config.json
+*.packages
 # Files for the ART/Dalvik VM
 *.dex
 
