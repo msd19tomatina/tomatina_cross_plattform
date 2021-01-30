@@ -5,9 +5,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-
 class OtpTimer extends StatefulWidget {
-
   @override
   _OtpTimerState createState() => _OtpTimerState();
 }
