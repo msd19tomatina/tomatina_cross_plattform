@@ -1,5 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:tomatina_cross_plattform/views/add_group.dart';
+import 'package:tomatina_cross_plattform/views/create_group.dart';
+import 'package:tomatina_cross_plattform/views/highscores_view.dart';
+import 'package:tomatina_cross_plattform/views/home_view.dart';
+import 'package:tomatina_cross_plattform/views/timer_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Flutter Cross Platform'),
+      home: HomeView(),
+      routes: {
+        '/createGroup': (context) => CreateGroup(),
+        '/addGroup' : (context) => AddGroup(),
+        '/timerView' : (context) => TimerView(),
+        'highscoresView' : (context) => HighscoresView(),
+      },
     );
   }
 }
@@ -45,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Icon(Icons.add, size: 30),
           Icon(Icons.list, size: 30),
           Icon(Icons.compare_arrows, size: 30),
-         
+
         ],
         color: Colors.white,
         buttonBackgroundColor: Colors.white,
