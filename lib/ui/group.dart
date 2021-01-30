@@ -7,6 +7,7 @@ import 'dart:async';
 
 
 class OtpTimer extends StatefulWidget {
+
   @override
   _OtpTimerState createState() => _OtpTimerState();
 }
