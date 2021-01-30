@@ -8,9 +8,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-           ListView(
+    Container(
+            child: ListView(
              padding: const EdgeInsets.all(8),
              children: <Widget>[
+
                Container(
                  height: 50,
                  color: Colors.amber[600],
@@ -27,6 +29,7 @@ class Home extends StatelessWidget {
                  child: const Center(child: Text('Entry C')),
                ),
              ],
-           );
+           ),
+    );
   }
 }

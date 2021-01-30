@@ -4,9 +4,9 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Group());
 
-class MyApp extends StatelessWidget {
+class Group extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
