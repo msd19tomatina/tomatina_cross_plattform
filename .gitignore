@@ -4,11 +4,10 @@
 *.ap_
 *.aab
 
-*.dart
+
 *.packages
 
 *.dart_tool/package_config.json
-*.packages
 # Files for the ART/Dalvik VM
 *.dex
 
@@ -90,9 +89,7 @@ lint/tmp/
 # lint/reports/
 
 # Miscellaneous
-*.class
 *.lock
-*.log
 *.pyc
 *.swp
 .DS_Store
@@ -102,7 +99,7 @@ lint/tmp/
 .svn/
 
 # IntelliJ related
-*.iml
+
 *.ipr
 *.iws
 .idea/
@@ -144,7 +141,6 @@ analysis_benchmark.json
 .packages
 .pub-cache/
 .pub/
-build/
 flutter_*.png
 linked_*.ds
 unlinked.ds
@@ -209,5 +205,4 @@ app.*.symbols
 
 # some things I still don't want
 .dart_tool/package_config.json
-.packages
 android/gradle.properties
