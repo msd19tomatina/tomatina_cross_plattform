@@ -9,6 +9,7 @@ import 'group.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return
     Container(
       child: Column(
         children: <Widget>[
@@ -25,34 +26,34 @@ class Home extends StatelessWidget {
           GestureDetector(
             child: Container(
               height: 50,
-              color: Colors.red[600],
+              color: Colors.blueGrey[600],
               child: const Center(child: Text('Gruppe 1')),
             ),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => OtpTimer()));
+                  context, MaterialPageRoute(builder: (context) => MyWidget()));
             },
           ),
           GestureDetector(
             child: Container(
               height: 50,
-              color: Colors.red[600],
+              color: Colors.blueGrey[600],
               child: const Center(child: Text('Gruppe 2')),
             ),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => OtpTimer()));
+                  context, MaterialPageRoute(builder: (context) => MyWidget()));
             },
           ),
           GestureDetector(
             child: Container(
               height: 50,
-              color: Colors.red[600],
+              color: Colors.blueGrey[600],
               child: const Center(child: Text('Gruppe 3')),
             ),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => OtpTimer()));
+                  context, MaterialPageRoute(builder: (context) => MyWidget()));
             },
           ),
         ],

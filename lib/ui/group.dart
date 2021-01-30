@@ -1,53 +1,103 @@
-// Copyright 2018 The Flutter team. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-class OtpTimer extends StatefulWidget {
+
+class MyWidget extends StatefulWidget {
+  MyWidget({Key key, this.title}) : super(key: key);
+
+  final String title;
+
   @override
-  _OtpTimerState createState() => _OtpTimerState();
+  _MyWidgetState createState() => _MyWidgetState();
 }
 
-class _OtpTimerState extends State<OtpTimer> {
-  final interval = const Duration(seconds: 1);
+class _MyWidgetState extends State<MyWidget> with TickerProviderStateMixin {
+  int _counter = 0;
+  AnimationController _controller;
+  int levelClock = 180;
 
-  final int timerMaxSeconds = 1500;
-
-  int currentSeconds = 0;
-
-  String get timerText =>
-      '${((timerMaxSeconds - currentSeconds) ~/ 60).toString().padLeft(2, '0')}: ${((timerMaxSeconds - currentSeconds) % 60).toString().padLeft(2, '0')}';
-
-  startTimeout([int milliseconds]) {
-    var duration = interval;
-    Timer.periodic(duration, (timer) {
-      setState(() {
-        print(timer.tick);
-        currentSeconds = timer.tick;
-        if (timer.tick >= timerMaxSeconds) timer.cancel();
-      });
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
     });
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
-    startTimeout();
     super.initState();
+
+    _controller = AnimationController(
+        vsync: this,
+        duration: Duration(
+            seconds:
+            levelClock) // gameData.levelClock is a user entered number elsewhere in the applciation
+    );
+
+    _controller.forward();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        Icon(Icons.timer),
-        SizedBox(
-          width: 5,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Countdown(
+              animation: StepTween(
+                begin: levelClock, // THIS IS A USER ENTERED NUMBER
+                end: 0,
+              ).animate(_controller),
+            ),
+            Text(
+              'You have pushed the button this many times:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.display1,
+            ),
+          ],
         ),
-        Text(timerText)
-      ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+class Countdown extends AnimatedWidget {
+  Countdown({Key key, this.animation}) : super(key: key, listenable: animation);
+  Animation<int> animation;
+
+  @override
+  build(BuildContext context) {
+    Duration clockTimer = Duration(seconds: animation.value);
+
+    String timerText =
+        '${clockTimer.inMinutes.remainder(60).toString()}:${clockTimer.inSeconds.remainder(60).toString().padLeft(2, '0')}';
+
+    print('animation.value  ${animation.value} ');
+    print('inMinutes ${clockTimer.inMinutes.toString()}');
+    print('inSeconds ${clockTimer.inSeconds.toString()}');
+    print('inSeconds.remainder ${clockTimer.inSeconds.remainder(60).toString()}');
+
+    return Text(
+      "$timerText",
+      style: TextStyle(
+        fontSize: 110,
+        color: Theme.of(context).primaryColor,
+      ),
     );
   }
 }
