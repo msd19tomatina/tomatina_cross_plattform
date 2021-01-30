@@ -4,14 +4,36 @@
 
 import 'package:flutter/material.dart';
 
-
 class CreateGroup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-    Center(
-          child: Text('Create Group'),
-
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Padding(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+              child: Text("Tomatina",
+                  style: TextStyle(fontSize: 20), textAlign: TextAlign.center)),
+          Padding(
+              padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+              child: Text("Gruppe Erstellen",
+                  style: TextStyle(fontSize: 15), textAlign: TextAlign.center)),
+          Padding(
+            padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+            child: TextField(
+              decoration: InputDecoration(
+                  border: InputBorder.none, hintText: 'Gruppenname'),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+            child: TextField(
+              decoration: InputDecoration(
+                  border: InputBorder.none, hintText: 'Benutzername'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
