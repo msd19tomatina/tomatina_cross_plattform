@@ -10,11 +10,11 @@
 // bar items. The first one is selected.](https://flutter.github.io/assets-for-api-docs/assets/material/bottom_navigation_bar.png)
 
 import 'package:flutter/material.dart';
-import 'package:tomatina/createGroup.dart';
-import 'package:tomatina/group.dart';
-import 'package:tomatina/highscores.dart';
-import 'package:tomatina/home.dart';
-import 'package:tomatina/joinGroup.dart';
+import 'package:tomatina/ui/createGroup.dart';
+import 'package:tomatina/ui/group.dart';
+import 'package:tomatina/ui/highscores.dart';
+import 'package:tomatina/ui/home.dart';
+import 'package:tomatina/ui/joinGroup.dart';
 
 void main() => runApp(MyApp());
 
