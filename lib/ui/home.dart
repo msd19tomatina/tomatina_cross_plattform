@@ -13,6 +13,8 @@ class Home extends StatelessWidget {
              padding: const EdgeInsets.all(8),
              children: <Widget>[
 
+                   Text("Tomatina", style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
+                   Text("Meine Gruppen", style: TextStyle(fontSize: 15),textAlign: TextAlign.center),
                Container(
                  height: 50,
                  color: Colors.amber[600],
@@ -28,8 +30,12 @@ class Home extends StatelessWidget {
                  color: Colors.amber[100],
                  child: const Center(child: Text('Entry C')),
                ),
+
              ],
-           ),
+
+            ),
+
     );
+
   }
 }

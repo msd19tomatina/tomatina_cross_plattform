@@ -67,7 +67,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("images/tomatinabg.png"), fit: BoxFit.cover), color: Color.fromRGBO(255, 255, 255, 0.1)),
+                colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+                image: AssetImage("images/tomatinabg.png"), fit: BoxFit.cover)),
 
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
