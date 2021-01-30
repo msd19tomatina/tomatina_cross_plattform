@@ -9,21 +9,26 @@ import 'group.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView(
-        padding: const EdgeInsets.all(8),
+    Container(
+      child: Column(
         children: <Widget>[
-          Text("Tomatina",
-              style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
-          Text("Meine Gruppen",
-              style: TextStyle(fontSize: 15), textAlign: TextAlign.center),
+          Padding(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+
+              child: Text("Tomatina", style: TextStyle(fontSize: 20),
+                  textAlign: TextAlign.center)),
+          Padding(
+              padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+
+              child: Text("Meine Gruppen", style: TextStyle(fontSize: 15),
+                  textAlign: TextAlign.center)),
           GestureDetector(
             child: Container(
               height: 50,
-              color: Colors.amber[600],
+              color: Colors.red[600],
               child: const Center(child: Text('Gruppe 1')),
             ),
-            onTap: (){
+            onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => OtpTimer()));
             },
@@ -31,10 +36,10 @@ class Home extends StatelessWidget {
           GestureDetector(
             child: Container(
               height: 50,
-              color: Colors.amber[600],
+              color: Colors.red[600],
               child: const Center(child: Text('Gruppe 2')),
             ),
-            onTap: (){
+            onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => OtpTimer()));
             },
@@ -42,10 +47,10 @@ class Home extends StatelessWidget {
           GestureDetector(
             child: Container(
               height: 50,
-              color: Colors.amber[600],
+              color: Colors.red[600],
               child: const Center(child: Text('Gruppe 3')),
             ),
-            onTap: (){
+            onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => OtpTimer()));
             },
