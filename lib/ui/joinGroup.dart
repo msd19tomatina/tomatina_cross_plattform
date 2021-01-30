@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:tomatina/ui/group.dart';
 
 class JoinGroup extends StatelessWidget {
   @override
@@ -32,6 +33,17 @@ class JoinGroup extends StatelessWidget {
                 decoration: InputDecoration(
                     border: InputBorder.none, hintText: 'Benutzername'),
               ),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => OtpTimer()));
+              },
+              icon: Icon(
+                Icons.check_circle_outline,
+                color: Colors.lightGreen[400],
+              ),
+              iconSize: 70.0,
             ),
           ],
 
