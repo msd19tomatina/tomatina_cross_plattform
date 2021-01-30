@@ -14,7 +14,7 @@ class OtpTimer extends StatefulWidget {
 class _OtpTimerState extends State<OtpTimer> {
   final interval = const Duration(seconds: 1);
 
-  final int timerMaxSeconds = 60;
+  final int timerMaxSeconds = 1500;
 
   int currentSeconds = 0;
 
