@@ -10,6 +10,11 @@
 // bar items. The first one is selected.](https://flutter.github.io/assets-for-api-docs/assets/material/bottom_navigation_bar.png)
 
 import 'package:flutter/material.dart';
+import 'package:tomatina/createGroup.dart';
+import 'package:tomatina/group.dart';
+import 'package:tomatina/highscores.dart';
+import 'package:tomatina/home.dart';
+import 'package:tomatina/joinGroup.dart';
 
 void main() => runApp(MyApp());
 
@@ -39,23 +44,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Create',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Join',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: HighScores',
-      style: optionStyle,
-    ),
+  static  List<Widget> _widgetOptions = <Widget>[
+    Home(),
+    CreateGroup(),
+    JoinGroup(),
+    Highscores(),
   ];
 
   void _onItemTapped(int index) {
