@@ -9,26 +9,30 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return
     Container(
-            child: ListView(
-             padding: const EdgeInsets.all(8),
+            child: Column(
              children: <Widget>[
+              Padding(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
 
-                   Text("Tomatina", style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
-                   Text("Meine Gruppen", style: TextStyle(fontSize: 15),textAlign: TextAlign.center),
+                  child:  Text("Tomatina", style: TextStyle(fontSize: 20), textAlign: TextAlign.center)),
+               Padding(
+                   padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+
+                   child:  Text("Meine Gruppen", style: TextStyle(fontSize: 15), textAlign: TextAlign.center)),
                Container(
-                 height: 50,
+                 height: 30,
                  color: Colors.amber[600],
-                 child: const Center(child: Text('Entry A')),
+                 child: const Center(child: Text('Gruppe 1')),
                ),
                Container(
-                 height: 50,
+                 height: 30,
                  color: Colors.amber[500],
-                 child: const Center(child: Text('Entry B')),
+                 child: const Center(child: Text('Gruppe 2')),
                ),
                Container(
-                 height: 50,
+                 height: 30,
                  color: Colors.amber[100],
-                 child: const Center(child: Text('Entry C')),
+                 child: const Center(child: Text('Gruppe 3')),
                ),
 
              ],
