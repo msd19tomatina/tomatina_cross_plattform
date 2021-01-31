@@ -2,8 +2,8 @@
 
 ## tomatina_cross_platform
 
-Assignment for mobile platforms at FH JOANNEUM.
-Native Android Application
+Assignment for mobile platforms at FH JOANNEUM. <br>
+Cross Platform Application
 
 ## Authors
 + Islam Hemida
