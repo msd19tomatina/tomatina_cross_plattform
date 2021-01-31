@@ -37,7 +37,7 @@ class JoinGroup extends StatelessWidget {
             IconButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => OtpTimer()));
+                    context, MaterialPageRoute(builder: (context) => MyWidget()));
               },
               icon: Icon(
                 Icons.check_circle_outline,
