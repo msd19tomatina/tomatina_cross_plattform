@@ -23,6 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  path_provider: ^1.6.27
+  shared_preferences: ^0.5.12+4
 
   curved_navigation_bar: ^0.3.1 #latest version
   # The following adds the Cupertino Icons font to your application.
@@ -46,6 +48,7 @@ flutter:
   uses-material-design: true
   assets:
     - images/tomatinabg.png
+    - files/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

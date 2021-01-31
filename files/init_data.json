@@ -1,0 +1,43 @@
+{
+  "groups": [
+    {
+      "group_name": "Gruppe 1",
+      "members": [
+        {
+          "name": "Isi",
+          "current_score": 25
+        },
+        {
+          "name": "Martin",
+          "current_score": 22
+        },
+        {
+          "name": "Robert",
+          "current_score": 12
+        }
+      ]
+    },
+    {
+      "group_name": "Gruppe 2",
+      "members": [
+        {
+          "name": "Random Name",
+          "current_score": 23
+        },
+        {
+          "name": "Second Random Name",
+          "current_score": 1
+        }
+      ]
+    },
+    {
+      "group_name": "Gruppe 3",
+      "members": [
+        {
+          "name": "Anonymous",
+          "current_score": 100
+        }
+      ]
+    }
+  ]
+}
