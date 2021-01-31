@@ -1,21 +1,32 @@
-# tomatina_cross_plattform
+# Tomatina
 
-First Application in Flutter
+## tomatina_cross_platform
 
-## Getting Started
+Assignment for mobile platforms at FH JOANNEUM.
+Native Android Application
 
-This project is a starting point for a Flutter application.
+## Authors
++ Islam Hemida
++ Robert Zavaczki
++ Martin Guevara-Kunerth
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## What it does
+The assignment was to program a cross platform application based on our previous prototypes. <br>
+Functionality was not the primary goal, we were asked to implement three screens from our design, with navigation between them. <br>
+Our App idea allows the user to track their learning sessions following the pomodoro method. <br>
+Every completed learning session earns the user one pomodoro. <br>
+To make it more interesting, the user can compare their earned pomodori with other people in a friendly competition.<br>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to start the app
+To test the application you will need to have android studio or a similar IDE installed on your computer. <br>
+You will also need to install flutter on your computer.
++ [install flutter](https://flutter.dev/docs/get-started/install) <br>
 
-## Authors:
-- Islam Hemida
-- Martin Guevara-Kunerth
-- Robert Zavaczki
+Download or clone this repository, open the project on your IDE, build the project and start an emulator. <br>
+We recommend Android Studio as most things are already implemented there.<br>
+
+## Where do the awesome tomatoes come from
+The artist Vanja Vikalo / LINNCH kindly allowed us to use his art for the icons and background images.
+
+http://linnch.com/
